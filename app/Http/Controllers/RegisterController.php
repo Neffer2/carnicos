@@ -17,10 +17,10 @@ class RegisterController extends Controller
 
     public function register (RegisterRequest $request){
         $user = User::Create([
-            $user->cod_user = 
-            email
-            documento
-            password	 
+            // $user->cod_user = 
+            // email
+            // documento
+            // password	 
         ]);
     }
 }
