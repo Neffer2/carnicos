@@ -21,6 +21,7 @@ class User extends Authenticatable
         'cod_user',
         'email',
         'documento',
+        'password'
     ];
 
     /**

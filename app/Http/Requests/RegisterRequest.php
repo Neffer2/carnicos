@@ -19,15 +19,15 @@ class RegisterRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, mixed>
+     * @return array<string, mixed> 
      */
-    public function rules()
+    public function rules() 
     { 
         return [
             'cod_user' => ['required', 'string', 'unique:users'],
             'email' => ['required', 'string', 'email', 'unique:users'],
             'documento' => ['required', 'string', 'unique:users'],
-            'password' => ['required', 'string', 'min:5', 'confirmed'],
+            'password' => ['string', 'min:5', 'confirmed'],
         ];
     }
 }

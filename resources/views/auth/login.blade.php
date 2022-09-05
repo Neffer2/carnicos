@@ -1,8 +1,7 @@
 @extends('layouts.auth')
     @section('title')
-        Regístrate
+        Incia sesi&oacute;n
     @endsection 
-    
     @section('content')
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -17,12 +16,11 @@
             </div>
         @endif
         <div>
-            <form action="{{ route('register') }}" method="POST">
+            <form action="{{ route('login') }}" method="POST">
                 @csrf
                 @method('POST')
-                <input type="text" name="cod_user" placeholder="Código de cliente" required>
-                <input type="text" name="documento" placeholder="Número de cédula" required>
                 <input type="text" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
                 <button>Continuar</button>
             </form>
         </div>
