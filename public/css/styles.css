@@ -100,7 +100,7 @@ a:hover {
         background-color: #fefefe;
         margin: auto;
         padding: 0;
-        border: 5px outset #FCBD19;
+        border: 10px ridge #FCBD19;
         border-radius: 55px;
         width: 35em;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -175,13 +175,10 @@ a:hover {
         border-radius: 200px;
         padding: 1.5em 1em;
         box-shadow: 2px 3px 3px Silver;
+        outline: 1px none #FCBD19;
     }
 
     .form-input:active, .form-input:focus {
-        border: 1px solid #FCBD19;
-    }
-
-    input[type=text]:focus {
         border: 1px solid #FCBD19;
     }
 
@@ -193,6 +190,7 @@ a:hover {
     }
 
     .modal-footer button {
+        cursor: pointer;
         position: relative;
         top: 18px;
         border-radius: 15px;
@@ -200,9 +198,18 @@ a:hover {
         padding: .5em 2em;
         color: FireBrick;
         font-family: Bits, sans-serif;
-        font-size: 7px;
         font-size: medium;
         font-weight: bold;
+        transition: border .3s;
+    }
+
+    .modal-footer button:hover {
+        border: 2px solid #FCBD19;
+        
+    }
+
+    .modal-footer button:active {       
+        font-size: large;
     }
     /* --- */
 

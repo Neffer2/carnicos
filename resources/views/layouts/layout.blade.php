@@ -13,36 +13,43 @@
     <div id="loginModal" class="modal">
     <!-- Modal content -->
         <div class="modal-content">
-            <div class="modal-header"> 
+            <div class="modal-header">
                 <h2 class="header-text">Inicio</h2>
                 <span id="close-login" class="header-close close"></span>
             </div>
-            <div class="modal-body">
-                <input class="form-input" type="text" name="email" placeholder="Alguien@ejemplo.com">
-                <input class="form-input" type="password" name="password" placeholder="Tu contraseña">
-            </div>
-            <div class="modal-footer">
-                <button>Continuar</button>
-            </div>
+            <form action="{{ route('login') }}" method="POST">
+                @csrf
+                <div class="modal-body">
+                    <input type="text" name="email" class="form-input" placeholder="Tu correo electrónico" required>
+                    <input type="password" name="password" class="form-input" placeholder="Tu contraseña" required>
+                </div> 
+                <div class="modal-footer">
+                    <button>Continuar</button>
+                </div> 
+            </form>
         </div>
     </div>
 
     <!-- Register Modal -->
     <div id="registerModal" class="modal">
-    <!-- Modal content -->
+        <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header"> 
                 <h2 class="header-text">Registro</h2>
                 <span id="close-register" class="header-close close"></span>
             </div>
-            <div class="modal-body">
-                <input class="form-input" type="text" name="email" placeholder="Código de cliente">
-                <input class="form-input" type="email" name="cod_user" placeholder="Tu correo electrónico">
-                <input class="form-input" type="password" name="password" placeholder="Tu documento de identidad">
-            </div>
-            <div class="modal-footer">
-                <button>Continuar</button>
-            </div>
+            <form action="{{ route('register') }}" method="POST">
+                <div class="modal-body">
+                    @csrf
+                    @method('POST')
+                    <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required>
+                    <input type="number" name="cod_user" class="form-input" placeholder="Código de cliente" required>
+                    <input type="number" name="documento" class="form-input" placeholder="Número de cédula" required>
+                </div>
+                <div class="modal-footer">
+                    <button>Continuar</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -54,11 +61,18 @@
             <p>TU LABOR HACE <b>HOGARES FELICES</b></p>
         </div>
         <div class="item login">
-            <a id="loginBtn" href="#">Inicio</a>
+            @guest
+                <a id="loginBtn" href="#">Inicio</a>
+            @endguest
         </div>
         <div class="item register">
-            <a id="registerBtn" href="#">Registro</a>
-        </div>
+            @guest
+                <a id="registerBtn" href="#">Registro</a>   
+            @endguest
+            @auth
+                <a href="/logout">Salir</a>    
+            @endauth
+        </div> 
     </div>
     <div class="container">
         @yield('content')
