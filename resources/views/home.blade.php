@@ -4,14 +4,13 @@
     @endsection
     @section('content')
         @if ($errors->any())
-            <div class="alert alert-danger">
-                <p>
-                    <h6 class="text-danger">!Opps ha ocurrido un error</h6>
-                </p>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+               <p><strong>!Opps ha ocurrido un error</strong></p>
                 <ul>
                     @foreach ($errors->all() as $elem)
-                        <li class="text-danger">{{ $elem }}</li>
-                    @endforeach 
+                        <li><h5>{{ $elem }}</h5></li>
+                    @endforeach
                 </ul>
             </div>
         @endif

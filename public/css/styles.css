@@ -1,7 +1,7 @@
 @font-face {
     font-family: Bits;
     src: url("fonts/EightBitDragon-anqx.ttf")  format('truetype');
-  }
+}
 
 * {
     margin: 0;
@@ -74,6 +74,32 @@ a:hover {
     font-weight: bold;
     color: #FCBD19;
 }
+
+/* Alert */
+    .alert {
+        padding: 20px;
+        background-color: red;
+        color: white;
+        margin: 5px 40px;
+        border-radius: 15px;
+    }
+  
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+  
+    .closebtn:hover {
+        color: black;
+    }
+  /* --- */
+
 
 /* Modal css */ 
     body {font-family: Arial, Helvetica, sans-serif;}
@@ -213,12 +239,17 @@ a:hover {
     }
     /* --- */
 
+
+
+
+
+    /* --- */
     @media (max-width: 768px) {
         .text {
             display: none;
         }
         
         .modal-content {
-            width: 80%;
+            width: 80%; 
         }
     }
