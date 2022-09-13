@@ -20,7 +20,7 @@ use App\Http\Controllers\GamesController;
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
 /* games */
-    Route::get('/super-gustino', [GamesController::class, 'super_gustino'])->name('super-gustino');
+    Route::get('/jumping', [GamesController::class, 'jumping'])->name('jumping');
 /* --- */
  
 /* -- Auth -- */

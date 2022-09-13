@@ -13,6 +13,6 @@
                     @endforeach
                 </ul>
             </div>
-        @endif
+        @endif 
         <h2>Soy el contenido</h2>
     @endsection

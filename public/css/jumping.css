@@ -1,0 +1,19 @@
+
+body { 
+    /* background-color: black; */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap;s */
+    justify-content: center;
+    align-items: center;
+}
+
+.game-item {
+    background-color: aqua;
+}
+
+
