@@ -1,19 +1,68 @@
 
 body { 
-    /* background-color: black; */
-}
+    
+} 
 
 
-.container {
+/* .container {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap;s */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.game-item {
-    background-color: aqua;
+.game {
+    flex-basis: 50%;
 }
 
+.left-side {
+    flex-grow: 2;
+    background-color: red;
+}
 
+.right-side {
+    flex-grow: 2;
+    background-color: aqua;
+}
+ */
+
+ .container {
+    background-color: blueviolet;
+    padding: 2rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+ }
+
+ .game {
+    display: flex;
+    justify-content: center;
+ }
+
+ .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .left-side-item {
+    background-color: blue;
+    color: white;
+    flex-basis: 30%;
+ }
+
+ .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .right-side-item {
+    background-color: blue;
+    color: white;
+    flex-basis: 30%;
+ }
